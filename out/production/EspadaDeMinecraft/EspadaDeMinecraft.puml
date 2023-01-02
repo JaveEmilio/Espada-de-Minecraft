@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+class Personaje{
+    - vida: int
+    - nombre: String
+    + crearEspada(espada:Espada)
+    + hacerDaño(personaje2: Personaje);
+}
+
+class Espada{
+    - cantidadDaño: int
+    + golpear()
+}
+class EspadaDeMadera{
+    + golpear(personaje2: Personaje)): int
+}
+class EspadaDeDiamante{
+    +golpear(personaje2: Personaje)): int
+}
+
+Personaje -> Espada
+EspadaDeDiamante <|-- Espada
+EspadaDeMadera <|-- Espada
+@enduml
