@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class Personaje {
+public class Personaje {
+    public Personaje(NumeroDeVida numeroDeVida) {
+
+    }
 }

@@ -1,26 +1,19 @@
-import Minecraft.Espada;
-import Minecraft.Personaje;
+
 
 public class Main {
     public static void main(String[] args) {
-        Personaje personaje1 = new Personaje("STEVE");
-        Personaje personaje2 = new Personaje("HERO");
+        Minecraft minecraft = new Minecraft(new Enemigo(NumeroDeVida.ENEMIGO));
+        Personaje usuario1 = minecraft.generarPersonaje(new Usuario(NumeroDeVida.USUARIO));
+        Personaje usuario2 = minecraft.generarPersonaje(new Usuario(NumeroDeVida.USUARIO));
+        usuario1.golpear(new Objeto());
+        usuario1.golpear(new Cerdo());
+        usuario1.golpear(usuario2);
+        //golpea de diferentes formas y te permite establecer polimosfirmo dependiendo de objeto te paso
+        usuario1.recolectar();
+        usuario1.craftear();
+        usuario1.ponerBloque();
+        usuario1.regenerar();
 
-        personaje1.crearEspada(new Espada());
-        personaje1.hacerDaño(personaje2);
-        personaje1.hacerDaño(personaje2);
-        personaje1.hacerDaño(personaje2);
-        personaje1.hacerDaño(personaje2);
-        personaje1.hacerDaño(personaje2);
-        personaje1.hacerDaño(personaje2);
-        personaje1.hacerDaño(personaje2);
-        personaje1.hacerDaño(personaje2);
-        personaje1.hacerDaño(personaje2);
-        personaje1.hacerDaño(personaje2);
-        personaje1.hacerDaño(personaje2);
-
-
-        System.out.println(personaje2.mostrarEstadisticas());
 
     }
 }

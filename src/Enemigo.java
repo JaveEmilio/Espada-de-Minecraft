@@ -1,2 +1,8 @@
-package PACKAGE_NAME;public class Enemigos {
+public class Enemigo extends Personaje {
+    private NumeroDeVida numeroDeVida;
+
+    public Enemigo(NumeroDeVida numeroDeVida) {
+        super(numeroDeVida);
+        this.numeroDeVida = numeroDeVida;
+    }
 }

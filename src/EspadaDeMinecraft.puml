@@ -1,12 +1,15 @@
 @startuml
 'https://plantuml.com/sequence-diagram
+class Minecraft{
+}
+abstract class Objeto
+
 class Personaje{
     - vida: int
     - nombre: String
     + crearEspada(espada:Espada)
     + hacerDaño(personaje2: Personaje);
 }
-
 class Espada{
     - cantidadDaño: int
     + golpear()
@@ -17,8 +20,9 @@ class EspadaDeMadera{
 class EspadaDeDiamante{
     +golpear(personaje2: Personaje)): int
 }
-
-Personaje -> Espada
-EspadaDeDiamante <|-- Espada
-EspadaDeMadera <|-- Espada
+Minecraft --> "*" Personaje: personajes
+Personaje --> "1...9" Objeto: objetos
+Espada <|- Objeto
+EspadaDeDiamante <|- Espada
+EspadaDeMadera <|- Espada
 @enduml
