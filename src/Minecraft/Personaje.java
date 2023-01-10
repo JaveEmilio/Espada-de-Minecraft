@@ -13,7 +13,7 @@ public class Personaje {
         this.espadaPersonaje = espadaPersonaje;
     }
 
-    public void hacerDaño(Personaje personaje2) {
+    public void hacerDaño(Main.Personaje personaje2) {
         if(!tieneVidaDelPersonaje(personaje2)){
             System.out.println("El personaje ya esta muerto");
             return;
@@ -21,7 +21,7 @@ public class Personaje {
         personaje2.vidaDelJuego -= espadaPersonaje.golpear();
     }
 
-    private boolean tieneVidaDelPersonaje(Personaje personaje2) {
+    private boolean tieneVidaDelPersonaje(Main.Personaje personaje2) {
     return personaje2.vidaDelJuego > 0;
     }
 
